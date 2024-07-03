@@ -59,7 +59,7 @@ Digite os seguintes comandos para verificar se cada ferramenta foi adicionada co
 Se os comandos acima retornarem as versões instaladas, as ferramentas foram adicionadas corretamente ao PATH.
 
 # Como Utilizar
-
+- Execute o código e jogue um boleto na pasta de entrada. Ele deverá sair na pasta "Saida" com a nova máscara.
 - Configuração de Caminhos: Atualize os caminhos dos arquivos e diretórios conforme necessário no script.
 - Execução: Execute o script. Ele irá processar os boletos automaticamente a cada minuto, conforme agendado.
 
