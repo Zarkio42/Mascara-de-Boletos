@@ -1,5 +1,7 @@
 # Máscara-de-Boletos
-Este script automatiza o processamento de boletos em PDF. Ele envolve a criação de diretórios, conversão de arquivos HTML para PDF, corte de PDFs, concatenação de imagens e geração de novos PDFs. O script é agendado para executar essas tarefas de tempos em tempos, a fim de monitorar uma pasta.
+Este script automatiza o processamento de boletos em PDF. Ele cria diretórios, converte arquivos HTML para PDF, corta PDFs, concatena imagens e gera novos PDFs. Em resumo, o script recebe um PDF, extrai dados para inserção em um HTML, recorta o PDF original, converte o HTML em PDF, transforma ambos os PDFs em imagens, os concatena e, por fim, os converte novamente em PDF.
+
+O script é agendado para executar essas tarefas de tempos em tempos, a fim de monitorar uma pasta.
 
 ### Dependências
 ```
@@ -55,3 +57,14 @@ Digite os seguintes comandos para verificar se cada ferramenta foi adicionada co
 `gswin64c --version ou gswin32c --version`
 
 Se os comandos acima retornarem as versões instaladas, as ferramentas foram adicionadas corretamente ao PATH.
+
+# Como Utilizar
+
+- Configuração de Caminhos: Atualize os caminhos dos arquivos e diretórios conforme necessário no script.
+- Execução: Execute o script. Ele irá processar os boletos automaticamente a cada minuto, conforme agendado.
+
+### Considerações
+
+Certifique-se de que os caminhos fornecidos para os arquivos e diretórios existem e são acessíveis.
+Ajuste o valor de `ponto_corte` conforme necessário para o corte correto dos PDFs.
+Monitore os logs e mensagens de erro para resolver quaisquer problemas que possam surgir durante a execução do script.
