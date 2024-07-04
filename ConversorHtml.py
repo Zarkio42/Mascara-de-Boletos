@@ -56,17 +56,15 @@ def extrair_dados_pdf(pdf_path):
 
             # Definir as linhas específicas a serem extraídas
             linha_nome = linhas[2] if len(linhas) > 2 else ''
-            linha_cod_barra = linhas[1] if len(linhas) > 1 else ''
+            linha_cod_barra = linhas[12] if len(linhas) > 12 else ''
             linha_data = linhas[6] if len(linhas) > 6 else ''
-            linha_n_doc = linhas[15] if len(linhas) > 15 else ''
-            linha_especie = linhas[17] if len(linhas) > 17 else ''
-            linha_aceite = linhas[20] if len(linhas) > 20 else ''
-            linha_dt_proc = linhas[6] if len(linhas) > 6 else ''
-            linha_nnum = linhas[25] if len(linhas) > 25 else ''
-
-            linha_ref = (linhas[68] if len(linhas) > 68 else '') + ": " + (linhas[69] if len(linhas) > 69 else '') + " " + (linhas[71] if len(linhas) > 71 else '') + " " + (linhas[72] if len(linhas) > 72 else '') + " " + (linhas[73] if len(linhas) > 73 else '') + " - " + (linhas[74] if len(linhas) > 74 else '') + " - " + (linhas[75] if len(linhas) > 75 else '') + " " + (linhas[76] if len(linhas) > 76 else '') + " - " + (linhas[77] if len(linhas) > 77 else '') + " - " + (linhas[78] if len(linhas) > 78 else '') + (linhas[79] if len(linhas) > 79 else '') + (linhas[80] if len(linhas) > 80 else '') + (linhas[81] if len(linhas) > 81 else '')
-
-            linha_valor = linhas[36] if len(linhas) > 36 else ''
+            linha_n_doc = linhas[14] if len(linhas) > 14 else ''
+            linha_especie = linhas[16] if len(linhas) > 16 else ''
+            linha_aceite = linhas[18] if len(linhas) > 18 else ''
+            linha_dt_proc = linhas[20] if len(linhas) > 20 else ''
+            linha_nnum = linhas[22] if len(linhas) > 22 else ''
+            linha_ref = linhas[24] if len(linhas) > 24 else ''
+            linha_valor = linhas[10] if len(linhas) > 10 else ''
             
             padrao_nome = r'^([^0-9]+)'
             match_nome = re.match(padrao_nome, linha_nome)
@@ -95,7 +93,6 @@ def extrair_dados_pdf(pdf_path):
             dados['valor'] = linha_valor.strip()
 
             print(dados)
-            print(linhas)
 
             return dados
     except Exception as e:
@@ -139,9 +136,5 @@ def atualizar_html_com_dados_do_boleto(boleto_pdf_path, html_path):
     except Exception as e:
         print(f"Erro ao atualizar o novo html com dados do boleto :( \n Erro: {e} ")
 
-
-pdf = r'./Entrada/Boleto Teste.pdf'
-extrair_dados_pdf(pdf)
-
-# html = r'./teste.html'
-# htmlto_pdf(html)
+html = r'C:/Users/administrator/Desktop/Mascara-de-Boletos/teste.html'
+htmlto_pdf(html)

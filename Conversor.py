@@ -1,13 +1,13 @@
 from wand.image import Image
 from PyPDF2 import PdfReader, PdfWriter
-from ConversorHtml import htmlToPdf
+from ConversorHtml import htmlto_pdf
 import os
 
 def pdf_to_image(pdf_path, output_path):
     try:
         # se não tiver convertido o arquivo html em pdf, executa a função
         if not os.path.exists(pdf_path):
-            htmlToPdf("./Arquivos/html/boletoDesk.html")
+            htmlto_pdf("./Arquivos/html/boletoDesk.html")
 
         with Image(filename=pdf_path, resolution=300) as img:
             img.format = 'png'
