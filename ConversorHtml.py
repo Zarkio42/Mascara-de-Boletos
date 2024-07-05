@@ -21,7 +21,7 @@ def extrair_cpf_pdf(pdf_path):
                 texto_completo += page.extract_text()
 
             linhas = texto_completo.split('\n')
-            linha = linhas[48]
+            linha = linhas[4]
             print(linha)
             padrao_numero = r'([0-9]+)$'
             match2 = re.search(padrao_numero, linha)
@@ -136,5 +136,8 @@ def atualizar_html_com_dados_do_boleto(boleto_pdf_path, html_path):
     except Exception as e:
         print(f"Erro ao atualizar o novo html com dados do boleto :( \n Erro: {e} ")
 
-html = r'C:/Users/administrator/Desktop/Mascara-de-Boletos/teste.html'
-htmlto_pdf(html)
+# html = r'C:/Users/administrator/Desktop/Mascara-de-Boletos/teste.html'
+# htmlto_pdf(html)
+# pdf = r'./Arquivos/Boleto-teste.pdf'
+# extrair_cpf_pdf(pdf)
+

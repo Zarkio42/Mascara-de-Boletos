@@ -43,7 +43,7 @@ def processar_boletos():
     # Caminho dos arquivos
     html_path_header = './Arquivos/html/boletoOrig.html' # Seu arquivo html (Pasta arquivos)
     header_path = './Arquivos/header.pdf' # Seu arquivo header (Html transformado em PDF)
-    ponto_corte = 0.56  # Ajuste este valor conforme necessário
+    ponto_corte = 0.54  # Ajuste este valor conforme necessário
     boletoEntrada_path = Path(r'./Entrada') # Pasta Entradas
     output_folder_path = Path(r'./Saida') # Pasta saída
     arquivos_folder_path = Path(r'./Arquivos') # Pasta Arquivos
